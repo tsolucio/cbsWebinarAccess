@@ -1,9 +1,9 @@
 <?php
 $mod_strings = array (
 //label of the distributor module
-    'Webinar Access' => 'Webinar Access',
-    'SINGLE_Webinar Access' => 'Webinar Access',
-	'Webinar Access ID' => 'Webinar Access ID',
+    'cbsWebinarAccess' => 'Webinar Access',
+    'SINGLE_cbsWebinarAccess' => 'Webinar Access',
+	'cbsWebinarAccess ID' => 'Webinar Access ID',
     'Webinar Access No.' => 'Webinar Access No.',
     'Access Date' => 'Accesso Data',
     'Access Time' => 'Accesso Tempo',
