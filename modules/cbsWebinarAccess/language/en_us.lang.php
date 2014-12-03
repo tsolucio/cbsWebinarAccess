@@ -12,6 +12,7 @@ $mod_strings = Array(
     'cbsWebinarAccess' => 'Webinar Access',
     'SINGLE_cbsWebinarAccess' => 'Webinar Access',
 	'cbsWebinarAccess ID' => 'Webinar Access ID',
+	'Webinar Access' => 'Webinar Access',
     'Webinar Access No.' => 'Webinar Access No.',
     'Access Date' => 'Access Date',
     'Access Time' => 'Access Time',
