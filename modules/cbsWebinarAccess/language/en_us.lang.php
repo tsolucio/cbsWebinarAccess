@@ -9,15 +9,16 @@
  ************************************************************************************/
 
 $mod_strings = Array(
-    'cbsWebinarAccess' => 'Webinar Access',
-    'cbsWebinarAccess' => 'Webinar Access',
-    'webinaraccessno' => 'Webinar Access No.',
-    'access_date' => 'Access Date',
-    'access_time' => 'Access Time',
-    'relid' => 'Related to',
-    'access_url' => 'Access URL',
-    'srvprovidor' => 'SRV Providor',
-    'attended' => 'Attended',
+    'Webinar Access' => 'Webinar Access',
+    'SINGLE_Webinar Access' => 'Webinar Access',
+	'Webinar Access ID' => 'Webinar Access ID',
+    'Webinar Access No.' => 'Webinar Access No.',
+    'Access Date' => 'Access Date',
+    'Access Time' => 'Access Time',
+    'Related to' => 'Related to',
+    'Access URL' => 'Access URL',
+    'SRV Providor' => 'SRV Providor',
+    'Attended' => 'Attended',
 
     'LBL_CUSTOM_INFORMATION' => 'Custom Information',
     'LBL_CBSWEBINARACCESS_INFORMATION' => 'Webinar Access Information',

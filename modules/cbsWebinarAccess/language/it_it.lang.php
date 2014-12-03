@@ -1,15 +1,16 @@
 <?php
 $mod_strings = array (
 //label of the distributor module
-    'cbsWebinarAccess' => 'Webinar Access',
-    'cbsWebinarAccess' => 'Webinar Access',
-    'webinaraccessno' => 'Webinar Access No.',
-    'access_date' => 'Accesso Data',
-    'access_time' => 'Accesso Tempo',
-    'relid' => 'Relato a',
-    'access_url' => 'Accesso URL',
-    'srvprovidor' => 'SRV Providor',
-    'attended' => 'Attended',
+    'Webinar Access' => 'Webinar Access',
+    'SINGLE_Webinar Access' => 'Webinar Access',
+	'Webinar Access ID' => 'Webinar Access ID',
+    'Webinar Access No.' => 'Webinar Access No.',
+    'Access Date' => 'Accesso Data',
+    'Access Time' => 'Accesso Tempo',
+    'Related to' => 'Relato a',
+    'Access URL' => 'Accesso URL',
+    'SRV Providor' => 'SRV Providor',
+    'Attended' => 'Attended',
 
     'LBL_CUSTOM_INFORMATION' => 'Informazioni Personalizzate',
     'LBL_CBSWEBINARACCESS_INFORMATION' => 'Webinar Access Information',
