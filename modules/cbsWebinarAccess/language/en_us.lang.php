@@ -18,7 +18,7 @@ $mod_strings = Array(
     'Access Time' => 'Access Time',
     'Related to' => 'Related to',
     'Access URL' => 'Access URL',
-    'SRV Providor' => 'SRV Providor',
+    'SRV Providor' => 'Webinar Providor',
     'Attended' => 'Attended',
 
     'LBL_CUSTOM_INFORMATION' => 'Custom Information',
