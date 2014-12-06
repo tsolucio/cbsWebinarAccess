@@ -196,7 +196,7 @@
 <fieldname>websiteid</fieldname>
 <uitype>1</uitype>
 <columnname>websiteid</columnname>
-<tablename>vtiger_cbswebsiteaccess</tablename>
+<tablename>vtiger_cbswebinaraccess</tablename>
 <generatedtype>1</generatedtype>
 <fieldlabel>websiteid</fieldlabel>
 <readonly>1</readonly>
@@ -216,7 +216,7 @@
 <fieldname>extcmpid</fieldname>
 <uitype>1</uitype>
 <columnname>extcmpid</columnname>
-<tablename>vtiger_cbswebsiteaccess</tablename>
+<tablename>vtiger_cbswebinaraccess</tablename>
 <generatedtype>1</generatedtype>
 <fieldlabel>extcmpid</fieldlabel>
 <readonly>1</readonly>
@@ -261,7 +261,7 @@
 <fieldname>cmpid</fieldname>
 <uitype>10</uitype>
 <columnname>cmpid</columnname>
-<tablename>vtiger_cbswebsiteaccess</tablename>
+<tablename>vtiger_cbswebinaraccess</tablename>
 <generatedtype>1</generatedtype>
 <fieldlabel>cmpid</fieldlabel>
 <readonly>1</readonly>
