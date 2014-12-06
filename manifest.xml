@@ -1,8 +1,7 @@
 <?xml version='1.0'?>
 <module>
-<exporttime>2014-11-26 14:38:53</exporttime>
 <name>cbsWebinarAccess</name>
-<label>Webinar Access</label>
+<label>cbsWebinarAccess</label>
 <parent>Analytics</parent>
 <dependencies>
 <vtiger_version>5.5.0</vtiger_version>
@@ -39,8 +38,14 @@
   `access_url` varchar(100) DEFAULT NULL,
   `srvprovidor` varchar(100) DEFAULT NULL,
   `attended` varchar(3) DEFAULT NULL,
+  `websiteid` varchar(100) DEFAULT NULL,
+  `extcmpid` varchar(100) DEFAULT NULL,
+  `cmpid` int(11) DEFAULT NULL,
   PRIMARY KEY (`cbswebinaraccessid`),
   index(`relid`),
+  index(`cmpid`),
+  index(`websiteid`),
+  index(`extcmpid`),
   index(`access_date`,`access_time`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8]]></sql>
 </table>
@@ -81,71 +86,6 @@
 </entityidentifier>
 </field>
 <field>
-<fieldname>access_date</fieldname>
-<uitype>5</uitype>
-<columnname>access_date</columnname>
-<tablename>vtiger_cbswebinaraccess</tablename>
-<generatedtype>1</generatedtype>
-<fieldlabel>Access Date</fieldlabel>
-<readonly>1</readonly>
-<presence>2</presence>
-<defaultvalue></defaultvalue>
-<sequence>2</sequence>
-<maximumlength>100</maximumlength>
-<typeofdata>D~M</typeofdata>
-<quickcreate>1</quickcreate>
-<quickcreatesequence></quickcreatesequence>
-<displaytype>1</displaytype>
-<info_type>BAS</info_type>
-<helpinfo><![CDATA[]]></helpinfo>
-<masseditable>1</masseditable>
-</field>
-<field>
-<fieldname>access_time</fieldname>
-<uitype>14</uitype>
-<columnname>access_time</columnname>
-<tablename>vtiger_cbswebinaraccess</tablename>
-<generatedtype>1</generatedtype>
-<fieldlabel>Access Time</fieldlabel>
-<readonly>1</readonly>
-<presence>2</presence>
-<defaultvalue></defaultvalue>
-<sequence>3</sequence>
-<maximumlength>100</maximumlength>
-<typeofdata>T~M</typeofdata>
-<quickcreate>1</quickcreate>
-<quickcreatesequence></quickcreatesequence>
-<displaytype>1</displaytype>
-<info_type>BAS</info_type>
-<helpinfo><![CDATA[]]></helpinfo>
-<masseditable>1</masseditable>
-</field>
-<field>
-<fieldname>relid</fieldname>
-<uitype>10</uitype>
-<columnname>relid</columnname>
-<tablename>vtiger_cbswebinaraccess</tablename>
-<generatedtype>1</generatedtype>
-<fieldlabel>Related to</fieldlabel>
-<readonly>1</readonly>
-<presence>0</presence>
-<defaultvalue></defaultvalue>
-<sequence>4</sequence>
-<maximumlength>11</maximumlength>
-<typeofdata>N~O</typeofdata>
-<quickcreate>1</quickcreate>
-<quickcreatesequence></quickcreatesequence>
-<displaytype>1</displaytype>
-<info_type>BAS</info_type>
-<helpinfo><![CDATA[]]></helpinfo>
-<masseditable>1</masseditable>
-<relatedmodules>
-<relatedmodule>Accounts</relatedmodule>
-<relatedmodule>Contacts</relatedmodule>
-<relatedmodule>Leads</relatedmodule>
-</relatedmodules>
-</field>
-<field>
 <fieldname>access_url</fieldname>
 <uitype>17</uitype>
 <columnname>access_url</columnname>
@@ -155,9 +95,29 @@
 <readonly>1</readonly>
 <presence>2</presence>
 <defaultvalue></defaultvalue>
-<sequence>5</sequence>
+<sequence>2</sequence>
 <maximumlength>100</maximumlength>
 <typeofdata>V~O</typeofdata>
+<quickcreate>1</quickcreate>
+<quickcreatesequence></quickcreatesequence>
+<displaytype>1</displaytype>
+<info_type>BAS</info_type>
+<helpinfo><![CDATA[]]></helpinfo>
+<masseditable>1</masseditable>
+</field>
+<field>
+<fieldname>access_date</fieldname>
+<uitype>5</uitype>
+<columnname>access_date</columnname>
+<tablename>vtiger_cbswebinaraccess</tablename>
+<generatedtype>1</generatedtype>
+<fieldlabel>Access Date</fieldlabel>
+<readonly>1</readonly>
+<presence>2</presence>
+<defaultvalue></defaultvalue>
+<sequence>3</sequence>
+<maximumlength>100</maximumlength>
+<typeofdata>D~M</typeofdata>
 <quickcreate>1</quickcreate>
 <quickcreatesequence></quickcreatesequence>
 <displaytype>1</displaytype>
@@ -175,7 +135,7 @@
 <readonly>1</readonly>
 <presence>2</presence>
 <defaultvalue></defaultvalue>
-<sequence>6</sequence>
+<sequence>4</sequence>
 <maximumlength>100</maximumlength>
 <typeofdata>V~O</typeofdata>
 <quickcreate>1</quickcreate>
@@ -193,12 +153,52 @@
 </picklistvalues>
 </field>
 <field>
+<fieldname>access_time</fieldname>
+<uitype>14</uitype>
+<columnname>access_time</columnname>
+<tablename>vtiger_cbswebinaraccess</tablename>
+<generatedtype>1</generatedtype>
+<fieldlabel>Access Time</fieldlabel>
+<readonly>1</readonly>
+<presence>2</presence>
+<defaultvalue></defaultvalue>
+<sequence>5</sequence>
+<maximumlength>100</maximumlength>
+<typeofdata>T~M</typeofdata>
+<quickcreate>1</quickcreate>
+<quickcreatesequence></quickcreatesequence>
+<displaytype>1</displaytype>
+<info_type>BAS</info_type>
+<helpinfo><![CDATA[]]></helpinfo>
+<masseditable>1</masseditable>
+</field>
+<field>
 <fieldname>attended</fieldname>
 <uitype>56</uitype>
 <columnname>attended</columnname>
 <tablename>vtiger_cbswebinaraccess</tablename>
 <generatedtype>1</generatedtype>
 <fieldlabel>Attended</fieldlabel>
+<readonly>1</readonly>
+<presence>2</presence>
+<defaultvalue></defaultvalue>
+<sequence>6</sequence>
+<maximumlength>3</maximumlength>
+<typeofdata>V~O</typeofdata>
+<quickcreate>1</quickcreate>
+<quickcreatesequence></quickcreatesequence>
+<displaytype>1</displaytype>
+<info_type>BAS</info_type>
+<helpinfo><![CDATA[]]></helpinfo>
+<masseditable>1</masseditable>
+</field>
+<field>
+<fieldname>websiteid</fieldname>
+<uitype>1</uitype>
+<columnname>websiteid</columnname>
+<tablename>vtiger_cbswebsiteaccess</tablename>
+<generatedtype>1</generatedtype>
+<fieldlabel>websiteid</fieldlabel>
 <readonly>1</readonly>
 <presence>2</presence>
 <defaultvalue></defaultvalue>
@@ -213,6 +213,74 @@
 <masseditable>1</masseditable>
 </field>
 <field>
+<fieldname>extcmpid</fieldname>
+<uitype>1</uitype>
+<columnname>extcmpid</columnname>
+<tablename>vtiger_cbswebsiteaccess</tablename>
+<generatedtype>1</generatedtype>
+<fieldlabel>extcmpid</fieldlabel>
+<readonly>1</readonly>
+<presence>2</presence>
+<defaultvalue></defaultvalue>
+<sequence>8</sequence>
+<maximumlength>3</maximumlength>
+<typeofdata>V~O</typeofdata>
+<quickcreate>1</quickcreate>
+<quickcreatesequence></quickcreatesequence>
+<displaytype>1</displaytype>
+<info_type>BAS</info_type>
+<helpinfo><![CDATA[]]></helpinfo>
+<masseditable>1</masseditable>
+</field>
+<field>
+<fieldname>relid</fieldname>
+<uitype>10</uitype>
+<columnname>relid</columnname>
+<tablename>vtiger_cbswebinaraccess</tablename>
+<generatedtype>1</generatedtype>
+<fieldlabel>Related to</fieldlabel>
+<readonly>1</readonly>
+<presence>0</presence>
+<defaultvalue></defaultvalue>
+<sequence>9</sequence>
+<maximumlength>11</maximumlength>
+<typeofdata>N~O</typeofdata>
+<quickcreate>1</quickcreate>
+<quickcreatesequence></quickcreatesequence>
+<displaytype>1</displaytype>
+<info_type>BAS</info_type>
+<helpinfo><![CDATA[]]></helpinfo>
+<masseditable>1</masseditable>
+<relatedmodules>
+<relatedmodule>Accounts</relatedmodule>
+<relatedmodule>Contacts</relatedmodule>
+<relatedmodule>Leads</relatedmodule>
+</relatedmodules>
+</field>
+<field>
+<fieldname>cmpid</fieldname>
+<uitype>10</uitype>
+<columnname>cmpid</columnname>
+<tablename>vtiger_cbswebsiteaccess</tablename>
+<generatedtype>1</generatedtype>
+<fieldlabel>cmpid</fieldlabel>
+<readonly>1</readonly>
+<presence>0</presence>
+<defaultvalue></defaultvalue>
+<sequence>10</sequence>
+<maximumlength>11</maximumlength>
+<typeofdata>N~O</typeofdata>
+<quickcreate>1</quickcreate>
+<quickcreatesequence></quickcreatesequence>
+<displaytype>1</displaytype>
+<info_type>BAS</info_type>
+<helpinfo><![CDATA[]]></helpinfo>
+<masseditable>1</masseditable>
+<relatedmodules>
+<relatedmodule>Campaigns</relatedmodule>
+</relatedmodules>
+</field>
+<field>
 <fieldname>assigned_user_id</fieldname>
 <uitype>53</uitype>
 <columnname>smownerid</columnname>
@@ -222,7 +290,7 @@
 <readonly>1</readonly>
 <presence>2</presence>
 <defaultvalue></defaultvalue>
-<sequence>8</sequence>
+<sequence>11</sequence>
 <maximumlength>100</maximumlength>
 <typeofdata>V~O</typeofdata>
 <quickcreate>1</quickcreate>
@@ -242,7 +310,7 @@
 <readonly>1</readonly>
 <presence>2</presence>
 <defaultvalue></defaultvalue>
-<sequence>9</sequence>
+<sequence>12</sequence>
 <maximumlength>100</maximumlength>
 <typeofdata>T~O</typeofdata>
 <quickcreate>1</quickcreate>
@@ -262,7 +330,7 @@
 <readonly>1</readonly>
 <presence>2</presence>
 <defaultvalue></defaultvalue>
-<sequence>10</sequence>
+<sequence>13</sequence>
 <maximumlength>100</maximumlength>
 <typeofdata>T~O</typeofdata>
 <quickcreate>1</quickcreate>
@@ -290,7 +358,7 @@
 <readonly>1</readonly>
 <presence>2</presence>
 <defaultvalue></defaultvalue>
-<sequence>11</sequence>
+<sequence>1</sequence>
 <maximumlength>100</maximumlength>
 <typeofdata>V~O</typeofdata>
 <quickcreate>1</quickcreate>

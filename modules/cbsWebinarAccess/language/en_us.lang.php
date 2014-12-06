@@ -12,7 +12,6 @@ $mod_strings = Array(
     'cbsWebinarAccess' => 'Webinar Access',
     'SINGLE_cbsWebinarAccess' => 'Webinar Access',
 	'cbsWebinarAccess ID' => 'Webinar Access ID',
-	'Webinar Access' => 'Webinar Access',
     'Webinar Access No.' => 'Webinar Access No.',
     'Access Date' => 'Access Date',
     'Access Time' => 'Access Time',
@@ -20,6 +19,9 @@ $mod_strings = Array(
     'Access URL' => 'Access URL',
     'SRV Providor' => 'Webinar Providor',
     'Attended' => 'Attended',
+	'websiteid' => 'Website ID',
+	'extcmpid' => 'External Campaign',
+	'cmpid' => 'Campaign',
 
     'LBL_CUSTOM_INFORMATION' => 'Custom Information',
     'LBL_CBSWEBINARACCESS_INFORMATION' => 'Webinar Access Information',

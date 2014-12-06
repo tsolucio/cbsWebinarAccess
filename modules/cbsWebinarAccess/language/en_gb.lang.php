@@ -9,15 +9,23 @@
  ************************************************************************************/
 
 $mod_strings = Array(
-	'ModuleName' => 'Module Name',
-	'SINGLE_ModuleName' => 'Module Name',
-	'ModuleName ID' => 'Module Name ID',
+    'cbsWebinarAccess' => 'Webinar Access',
+    'SINGLE_cbsWebinarAccess' => 'Webinar Access',
+	'cbsWebinarAccess ID' => 'Webinar Access ID',
+    'Webinar Access No.' => 'Webinar Access No.',
+    'Access Date' => 'Access Date',
+    'Access Time' => 'Access Time',
+    'Related to' => 'Related to',
+    'Access URL' => 'Access URL',
+    'SRV Providor' => 'Webinar Providor',
+    'Attended' => 'Attended',
+	'websiteid' => 'Website ID',
+	'extcmpid' => 'External Campaign',
+	'cmpid' => 'Campaign',
 
-	'LBL_CUSTOM_INFORMATION' => 'Custom Information',
-	'LBL_MODULEBLOCK_INFORMATION' => 'ModuleBlock Information',
-	'LBL_DESCRIPTION_INFORMATION' => 'Description',
-
-	'ModuleFieldLabel' => 'ModuleFieldLabel Text',
+    'LBL_CUSTOM_INFORMATION' => 'Custom Information',
+    'LBL_CBSWEBINARACCESS_INFORMATION' => 'Webinar Access Information',
+    'LBL_DESCRIPTION_INFORMATION' => 'Description',
 );
 
 ?>
